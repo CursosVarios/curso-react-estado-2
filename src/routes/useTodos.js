@@ -2,8 +2,9 @@ import React from "react";
 import { useLocalStorage } from "./useLocalStorage";
 
 function newTodoId(todoList) {
-  console.log(todoList)
-  return (Math.max(...todoList.map((todo) => todo.id)) ?? 0) + 1;
+  const lista = todoList.map((todo) => todo.id);
+  const max = Math.max(0, ...lista);
+  return max + 1;
 }
 function useTodos() {
   const {

@@ -1,24 +1,29 @@
-import React from 'react';
-import './TodoForm.css';
+import React from "react";
+import "./TodoForm.css";
 
-function TodoForm({ addTodo, setOpenModal }) {
-  const [newTodoValue, setNewTodoValue] = React.useState('');
+function TodoForm({ onSubmitEvent, onClose, isEdit }) {
+  const [newTodoValue, setNewTodoValue] = React.useState("");
 
   const onChange = (event) => {
     setNewTodoValue(event.target.value);
   };
   const onCancel = () => {
-    setOpenModal(false);
+    onClose();
   };
   const onSubmit = (event) => {
     event.preventDefault();
-    addTodo(newTodoValue);
-    setOpenModal(false);
+    onSubmitEvent(newTodoValue.trim());
+    onClose();
   };
-
+  let title = "Escribe tu nuevo TODO";
+  let buttonText = "Añadir";
+  if (!isEdit) {
+    title = "Edita el TODO";
+    buttonText = "Actualizar";
+  }
   return (
     <form onSubmit={onSubmit}>
-      <label>Escribe tu nuevo TODO</label>
+      <label>{title}</label>
       <textarea
         value={newTodoValue}
         onChange={onChange}
@@ -29,14 +34,11 @@ function TodoForm({ addTodo, setOpenModal }) {
           type="button"
           className="TodoForm-button TodoForm-button--cancel"
           onClick={onCancel}
-          >
+        >
           Cancelar
         </button>
-        <button
-          type="submit"
-          className="TodoForm-button TodoForm-button--add"
-        >
-          Añadir
+        <button type="submit" className="TodoForm-button TodoForm-button--add">
+          {buttonText}
         </button>
       </div>
     </form>
