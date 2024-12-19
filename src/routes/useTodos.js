@@ -42,11 +42,22 @@ function useTodos() {
     });
     saveTodos(newTodos);
   };
+  const getTodo = (id) => {
+    const todo = todos.find((todo) => todo.id === id);
+    return todo ?? {};
+  };
 
   const completeTodo = (id) => {
     const todoIndex = todos.findIndex((todo) => todo.id === id);
     const newTodos = [...todos];
     newTodos[todoIndex].completed = true;
+    saveTodos(newTodos);
+  };
+
+  const editTodo = (id, text) => {
+    const todoIndex = todos.findIndex((todo) => todo.id === id);
+    const newTodos = [...todos];
+    newTodos[todoIndex].text = text;
     saveTodos(newTodos);
   };
 
@@ -60,16 +71,19 @@ function useTodos() {
   const state = {
     loading,
     error,
+    todos,
     totalTodos,
     completedTodos,
     searchValue,
     searchedTodos,
     openModal,
+    getTodo,
   };
 
   const stateUpdaters = {
     setSearchValue,
     addTodo,
+    editTodo,
     completeTodo,
     deleteTodo,
     setOpenModal,

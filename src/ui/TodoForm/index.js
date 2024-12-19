@@ -1,8 +1,8 @@
 import React from "react";
 import "./TodoForm.css";
 
-function TodoForm({ onSubmitEvent, onClose, isEdit }) {
-  const [newTodoValue, setNewTodoValue] = React.useState("");
+function TodoForm({ onSubmitEvent, onClose, isEdit, initialText }) {
+  const [newTodoValue, setNewTodoValue] = React.useState(initialText ?? "");
 
   const onChange = (event) => {
     setNewTodoValue(event.target.value);
@@ -17,7 +17,7 @@ function TodoForm({ onSubmitEvent, onClose, isEdit }) {
   };
   let title = "Escribe tu nuevo TODO";
   let buttonText = "Añadir";
-  if (!isEdit) {
+  if (isEdit) {
     title = "Edita el TODO";
     buttonText = "Actualizar";
   }

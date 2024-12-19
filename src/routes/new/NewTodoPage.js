@@ -12,7 +12,6 @@ function NewTodoPage() {
   return (
     <>
       <TodoForm
-        isEdit={true}
         onSubmitEvent={(text) => {
           addTodo(text);
           goHome();
