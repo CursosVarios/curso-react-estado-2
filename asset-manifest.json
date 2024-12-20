@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/curso-react-estado-2/static/css/main.5d73d73b.chunk.css",
+    "main.js": "/curso-react-estado-2/static/js/main.4d823299.chunk.js",
+    "main.js.map": "/curso-react-estado-2/static/js/main.4d823299.chunk.js.map",
+    "runtime-main.js": "/curso-react-estado-2/static/js/runtime-main.a2963820.js",
+    "runtime-main.js.map": "/curso-react-estado-2/static/js/runtime-main.a2963820.js.map",
+    "static/js/2.497c8bcf.chunk.js": "/curso-react-estado-2/static/js/2.497c8bcf.chunk.js",
+    "static/js/2.497c8bcf.chunk.js.map": "/curso-react-estado-2/static/js/2.497c8bcf.chunk.js.map",
+    "index.html": "/curso-react-estado-2/index.html",
+    "static/css/main.5d73d73b.chunk.css.map": "/curso-react-estado-2/static/css/main.5d73d73b.chunk.css.map",
+    "static/js/2.497c8bcf.chunk.js.LICENSE.txt": "/curso-react-estado-2/static/js/2.497c8bcf.chunk.js.LICENSE.txt",
+    "static/media/check.fa4fb594.svg": "/curso-react-estado-2/static/media/check.fa4fb594.svg",
+    "static/media/delete.331149da.svg": "/curso-react-estado-2/static/media/delete.331149da.svg",
+    "static/media/edit.6032eb2f.svg": "/curso-react-estado-2/static/media/edit.6032eb2f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a2963820.js",
+    "static/js/2.497c8bcf.chunk.js",
+    "static/css/main.5d73d73b.chunk.css",
+    "static/js/main.4d823299.chunk.js"
+  ]
+}
